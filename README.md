@@ -8,3 +8,6 @@
 
 # Sprint 3
 28 September -> 04 Oktober 2020 (Minggu ke-5 Mobile Computing 113)
+
+# Test REST Api
+![image](https://github.com/DNABigBoss/Mobcom-WebService/blob/sprint3/test_api_1.gif) 
