@@ -19,3 +19,5 @@ Repositori ini dibuat untuk memenuhi tugas mata kuliah Mobile Computing 113
 * [Sprint 2](https://github.com/DNABigBoss/Mobcom/tree/sprint2)
 * [Sprint 3](https://github.com/DNABigBoss/Mobcom/tree/sprint3)
 * [Sprint 4](https://github.com/DNABigBoss/Mobcom/tree/sprint4)
+* [Sprint 5](https://github.com/DNABigBoss/Mobcom/tree/sprint5)
+* [Sprint 6](https://github.com/DNABigBoss/Mobcom/tree/sprint6)
