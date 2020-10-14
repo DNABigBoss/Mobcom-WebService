@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 11 Okt 2020 pada 12.10
+-- Waktu pembuatan: 14 Okt 2020 pada 14.56
 -- Versi server: 10.1.37-MariaDB
 -- Versi PHP: 7.2.13
 
@@ -42,29 +42,29 @@ CREATE TABLE `bahan` (
 --
 
 INSERT INTO `bahan` (`id`, `nama`, `gambar`) VALUES
-(1, 'Tepung Terigu', NULL),
-(2, 'Gula Pasir', NULL),
-(3, 'Telur', NULL),
-(4, 'Susu Bubuk', NULL),
-(5, 'Coklat Bubuk', NULL),
-(6, 'Dark Coklat', NULL),
-(7, 'Mentega', NULL),
-(8, 'SP (Emulsifier)', NULL),
-(9, 'Baking Powder', NULL),
-(10, 'Vanili', NULL),
-(11, 'Garam', NULL),
-(12, 'Minyak Goreng', NULL),
-(13, 'Margarin', NULL),
-(14, 'Ragi Instan (Fermipan)', NULL),
-(15, 'Vanili Cair', NULL),
-(16, 'Susu Kental Manis', NULL),
-(17, 'Air', NULL),
-(18, 'Wijen', NULL),
-(19, 'Maizena', NULL),
-(20, 'Vanila Bubuk', NULL),
-(21, 'Selai', NULL),
-(22, 'Butter Leleh', NULL),
-(23, 'Tepung Segitiga', NULL);
+(1, 'Tepung Terigu', 'https://apimarbidev.000webhostapp.com/assets/img/bahan/tepungterigu.jpg'),
+(2, 'Gula Pasir', 'https://apimarbidev.000webhostapp.com/assets/img/bahan/gulapasir.jpg'),
+(3, 'Telur', 'https://apimarbidev.000webhostapp.com/assets/img/bahan/telur.jpg'),
+(4, 'Susu Bubuk', 'https://apimarbidev.000webhostapp.com/assets/img/bahan/susububuk.jpg'),
+(5, 'Coklat Bubuk', 'https://apimarbidev.000webhostapp.com/assets/img/bahan/coklatbubuk.jpg'),
+(6, 'Dark Coklat', 'https://apimarbidev.000webhostapp.com/assets/img/bahan/darkcoklat.jpg'),
+(7, 'Mentega', 'https://apimarbidev.000webhostapp.com/assets/img/bahan/mentega.png'),
+(8, 'SP (Emulsifier)', 'https://apimarbidev.000webhostapp.com/assets/img/bahan/emulsifier.jpg'),
+(9, 'Baking Powder', 'https://apimarbidev.000webhostapp.com/assets/img/bahan/bakingpowder.jpg'),
+(10, 'Vanili', 'https://apimarbidev.000webhostapp.com/assets/img/bahan/vanili.jpg'),
+(11, 'Garam', 'https://apimarbidev.000webhostapp.com/assets/img/bahan/garam.jpg'),
+(12, 'Minyak Goreng', 'https://apimarbidev.000webhostapp.com/assets/img/bahan/minyakgoreng.jpg'),
+(13, 'Margarin', 'https://apimarbidev.000webhostapp.com/assets/img/bahan/margarin.jpg'),
+(14, 'Ragi Instan (Fermipan)', 'https://apimarbidev.000webhostapp.com/assets/img/bahan/fermipan.jpg'),
+(15, 'Vanili Cair', 'https://apimarbidev.000webhostapp.com/assets/img/bahan/vanili.jpg'),
+(16, 'Susu Kental Manis', 'https://apimarbidev.000webhostapp.com/assets/img/bahan/susukentalmanis.jpg'),
+(17, 'Air', 'https://apimarbidev.000webhostapp.com/assets/img/bahan/air.jpg'),
+(18, 'Wijen', 'https://apimarbidev.000webhostapp.com/assets/img/bahan/wijen.jpg'),
+(19, 'Maizena', 'https://apimarbidev.000webhostapp.com/assets/img/bahan/maizena.jpg'),
+(20, 'Vanila Bubuk', 'https://apimarbidev.000webhostapp.com/assets/img/bahan/vanilabubuk.jpg'),
+(21, 'Selai', 'https://apimarbidev.000webhostapp.com/assets/img/bahan/selai.jpg'),
+(22, 'Butter Leleh', 'https://apimarbidev.000webhostapp.com/assets/img/bahan/mentega.png'),
+(23, 'Tepung Segitiga', 'https://apimarbidev.000webhostapp.com/assets/img/bahan/tepungsegitga.jpg');
 
 -- --------------------------------------------------------
 

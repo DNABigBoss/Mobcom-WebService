@@ -3,59 +3,49 @@ defined('BASEPATH') or exit('No direct script access allowed');
 
 use chriskacerguis\RestServer\RestController;
 
-class Resep extends RESTController
+class Bahan extends RESTController
 {
 
     function __construct()
     {
         // Construct the parent class
         parent::__construct();
-        $this->load->model('Resep_model', 'resep');
+        $this->load->model('Bahan_model', 'Bahan');
     }
 
     public function index_get()
     {
         $id = $this->get('id');
         $nama = $this->get('nama');
-        $limit = $this->get('limit');
-        $bahan = $this->get('bahan');
-        
-        if ($id === null && $nama === null && $bahan === null) {
-            $resep = $this->resep->getResep();
-        } elseif ($id !== null && $nama !== null && $bahan !== null) {
+        $order = strtolower($this->get('order'));
+
+        if ($id === null && $nama === null && $order === null) {
+            $Bahan = $this->Bahan->getBahan();
+        } else if ($id === null && $nama === null && ($order === 'asc' || $order === 'desc')) {
+            $Bahan = $this->Bahan->getBahan($id = null, $nama = null, $order);
+        } elseif (($id !== null && $nama !== null)) {
             $this->response([
                 'status' => false,
                 'message' => 'Bad Request data'
             ], 400);
         } else {
-            if ($nama != null) {
-                if ($limit != null) {
-                    $resep = $this->resep->getResep($id = null, $nama, $limit);   
-                } else {
-                    $resep = $this->resep->getResep($id = null, $nama);
-                }
-            } else if ($bahan != null) {
-                if ($limit != null) {
-                    $resep = $this->resep->getResep($id = null, $nama = null, $limit, $bahan);
-                } else {
-                    $resep = $this->resep->getResep($id = null, $nama = null, $limit = null, $bahan);
-                }
-                
-            } else if ($limit != null) {
-                $resep = $this->resep->getResep($id = null, $nama = null, $limit);
+            if ($nama != null && $order === null) {
+                $Bahan = $this->Bahan->getBahan($id = null, $nama);
+            } else if ($nama != null && ($order === 'asc' || $order === 'desc')) {
+                $Bahan = $this->Bahan->getBahan($id = null, $nama, $order);
             } else {
-                $resep = $this->resep->getResep($id);
+                $Bahan = $this->Bahan->getBahan($id);
             }
         }
 
-        if ($resep) {
+        if ($Bahan) {
             // Set the response and exit
-            $this->response($resep, 200);
+            $this->response($Bahan, 200);
         } else {
             // Set the response and exit
             $this->response([
                 'status' => false,
-                'message' => 'No Resep were found'
+                'message' => 'No Bahan were found'
             ], 404);
         }
     }
@@ -72,7 +62,7 @@ class Resep extends RESTController
             'gambar' => $this->post('gambar'),
         ];
 
-        if ($this->resep->createResep($data) > 0) {
+        if ($this->Bahan->createBahan($data) > 0) {
             // Success
             $this->response([
                 'status' => true,
@@ -100,7 +90,7 @@ class Resep extends RESTController
             'gambar' => $this->put('gambar'),
         ];
 
-        if ($this->resep->updateResep($data, $id) > 0) {
+        if ($this->Bahan->updateBahan($data, $id) > 0) {
             // Success
             $this->response([
                 'status' => true,
@@ -125,7 +115,7 @@ class Resep extends RESTController
                 'message' => 'Provide an id'
             ], 400);
         } else {
-            if ($this->resep->deleteResep($id) > 0) {
+            if ($this->Bahan->deleteBahan($id) > 0) {
                 // Success
                 $this->response([
                     'status' => true,
