@@ -21,8 +21,8 @@ SET time_zone = "+00:00";
 --
 -- Database: `resep_jajanan_kekinian`
 --
-CREATE DATABASE IF NOT EXISTS `resep_jajanan_kekinian` DEFAULT CHARACTER SET utf32 COLLATE utf32_unicode_ci;
-USE `resep_jajanan_kekinian`;
+CREATE DATABASE IF NOT EXISTS `id15133128_resep_jajanan_kekinian` DEFAULT CHARACTER SET utf32 COLLATE utf32_unicode_ci;
+USE `id15133128_resep_jajanan_kekinian`;
 
 -- --------------------------------------------------------
 
@@ -42,29 +42,29 @@ CREATE TABLE `bahan` (
 --
 
 INSERT INTO `bahan` (`id`, `nama`, `gambar`) VALUES
-(1, 'Tepung Terigu', 'https://apimarbidev.000webhostapp.com/assets/img/bahan/tepungterigu.jpg'),
-(2, 'Gula Pasir', 'https://apimarbidev.000webhostapp.com/assets/img/bahan/gulapasir.jpg'),
-(3, 'Telur', 'https://apimarbidev.000webhostapp.com/assets/img/bahan/telur.jpg'),
-(4, 'Susu Bubuk', 'https://apimarbidev.000webhostapp.com/assets/img/bahan/susububuk.jpg'),
-(5, 'Coklat Bubuk', 'https://apimarbidev.000webhostapp.com/assets/img/bahan/coklatbubuk.jpg'),
-(6, 'Dark Coklat', 'https://apimarbidev.000webhostapp.com/assets/img/bahan/darkcoklat.jpg'),
-(7, 'Mentega', 'https://apimarbidev.000webhostapp.com/assets/img/bahan/mentega.png'),
-(8, 'SP (Emulsifier)', 'https://apimarbidev.000webhostapp.com/assets/img/bahan/emulsifier.jpg'),
-(9, 'Baking Powder', 'https://apimarbidev.000webhostapp.com/assets/img/bahan/bakingpowder.jpg'),
-(10, 'Vanili', 'https://apimarbidev.000webhostapp.com/assets/img/bahan/vanili.jpg'),
-(11, 'Garam', 'https://apimarbidev.000webhostapp.com/assets/img/bahan/garam.jpg'),
-(12, 'Minyak Goreng', 'https://apimarbidev.000webhostapp.com/assets/img/bahan/minyakgoreng.jpg'),
-(13, 'Margarin', 'https://apimarbidev.000webhostapp.com/assets/img/bahan/margarin.jpg'),
-(14, 'Ragi Instan (Fermipan)', 'https://apimarbidev.000webhostapp.com/assets/img/bahan/fermipan.jpg'),
-(15, 'Vanili Cair', 'https://apimarbidev.000webhostapp.com/assets/img/bahan/vanili.jpg'),
-(16, 'Susu Kental Manis', 'https://apimarbidev.000webhostapp.com/assets/img/bahan/susukentalmanis.jpg'),
-(17, 'Air', 'https://apimarbidev.000webhostapp.com/assets/img/bahan/air.jpg'),
-(18, 'Wijen', 'https://apimarbidev.000webhostapp.com/assets/img/bahan/wijen.jpg'),
-(19, 'Maizena', 'https://apimarbidev.000webhostapp.com/assets/img/bahan/maizena.jpg'),
-(20, 'Vanila Bubuk', 'https://apimarbidev.000webhostapp.com/assets/img/bahan/vanilabubuk.jpg'),
-(21, 'Selai', 'https://apimarbidev.000webhostapp.com/assets/img/bahan/selai.jpg'),
-(22, 'Butter Leleh', 'https://apimarbidev.000webhostapp.com/assets/img/bahan/mentega.png'),
-(23, 'Tepung Segitiga', 'https://apimarbidev.000webhostapp.com/assets/img/bahan/tepungsegitga.jpg');
+(1, 'Tepung Terigu', 'https://resepjajanankekinian.000webhostapp.com/assets/img/bahan/tepungterigu.jpg'),
+(2, 'Gula Pasir', 'https://resepjajanankekinian.000webhostapp.com/assets/img/bahan/gulapasir.jpg'),
+(3, 'Telur', 'https://resepjajanankekinian.000webhostapp.com/assets/img/bahan/telur.jpg'),
+(4, 'Susu Bubuk', 'https://resepjajanankekinian.000webhostapp.com/assets/img/bahan/susububuk.jpg'),
+(5, 'Coklat Bubuk', 'https://resepjajanankekinian.000webhostapp.com/assets/img/bahan/coklatbubuk.jpg'),
+(6, 'Dark Coklat', 'https://resepjajanankekinian.000webhostapp.com/assets/img/bahan/darkcoklat.jpg'),
+(7, 'Mentega', 'https://resepjajanankekinian.000webhostapp.com/assets/img/bahan/mentega.png'),
+(8, 'SP (Emulsifier)', 'https://resepjajanankekinian.000webhostapp.com/assets/img/bahan/emulsifier.jpg'),
+(9, 'Baking Powder', 'https://resepjajanankekinian.000webhostapp.com/assets/img/bahan/bakingpowder.jpg'),
+(10, 'Vanili', 'https://resepjajanankekinian.000webhostapp.com/assets/img/bahan/vanili.jpg'),
+(11, 'Garam', 'https://resepjajanankekinian.000webhostapp.com/assets/img/bahan/garam.jpg'),
+(12, 'Minyak Goreng', 'https://resepjajanankekinian.000webhostapp.com/assets/img/bahan/minyakgoreng.jpg'),
+(13, 'Margarin', 'https://resepjajanankekinian.000webhostapp.com/assets/img/bahan/margarin.jpg'),
+(14, 'Ragi Instan (Fermipan)', 'https://resepjajanankekinian.000webhostapp.com/assets/img/bahan/fermipan.jpg'),
+(15, 'Vanili Cair', 'https://resepjajanankekinian.000webhostapp.com/assets/img/bahan/vanili.jpg'),
+(16, 'Susu Kental Manis', 'https://resepjajanankekinian.000webhostapp.com/assets/img/bahan/susukentalmanis.jpg'),
+(17, 'Air', 'https://resepjajanankekinian.000webhostapp.com/assets/img/bahan/air.jpg'),
+(18, 'Wijen', 'https://resepjajanankekinian.000webhostapp.com/assets/img/bahan/wijen.jpg'),
+(19, 'Maizena', 'https://resepjajanankekinian.000webhostapp.com/assets/img/bahan/maizena.jpg'),
+(20, 'Vanila Bubuk', 'https://resepjajanankekinian.000webhostapp.com/assets/img/bahan/vanilabubuk.jpg'),
+(21, 'Selai', 'https://resepjajanankekinian.000webhostapp.com/assets/img/bahan/selai.jpg'),
+(22, 'Butter Leleh', 'https://resepjajanankekinian.000webhostapp.com/assets/img/bahan/mentega.png'),
+(23, 'Tepung Segitiga', 'https://resepjajanankekinian.000webhostapp.com/assets/img/bahan/tepungsegitga.jpg');
 
 -- --------------------------------------------------------
 
@@ -174,10 +174,10 @@ CREATE TABLE `resep` (
 --
 
 INSERT INTO `resep` (`id`, `nama`, `waktu_memasak`, `porsi`, `harga`, `favorit`, `dilihat`, `gambar`) VALUES
-(1, 'Kue Balok', '30 Menit', 0, '45000.00', 0, 0, 'https://apimarbidev.000webhostapp.com/assets/img/kuebalok.jpg'),
-(2, 'Kue Bantal', '30 Menit', 5, NULL, 0, 0, 'https://apimarbidev.000webhostapp.com/assets/img/kuebantal.jpg'),
-(3, 'Bolu Gulung', '30 Menit', 5, '45000.00', 10, 50, 'https://apimarbidev.000webhostapp.com/assets/img/bolugulung.jpg'),
-(4, 'Bolu Kukus', '60 Menit', 10, '50000.00', 0, 0, 'https://apimarbidev.000webhostapp.com/assets/img/bolukukus.jpg');
+(1, 'Kue Balok', '30 Menit', 0, '45000.00', 0, 0, 'https://resepjajanankekinian.000webhostapp.com/assets/img/kuebalok.jpg'),
+(2, 'Kue Bantal', '30 Menit', 5, NULL, 0, 0, 'https://resepjajanankekinian.000webhostapp.com/assets/img/kuebantal.jpg'),
+(3, 'Bolu Gulung', '30 Menit', 5, '45000.00', 10, 50, 'https://resepjajanankekinian.000webhostapp.com/assets/img/bolugulung.jpg'),
+(4, 'Bolu Kukus', '60 Menit', 10, '50000.00', 0, 0, 'https://resepjajanankekinian.000webhostapp.com/assets/img/bolukukus.jpg');
 
 -- --------------------------------------------------------
 

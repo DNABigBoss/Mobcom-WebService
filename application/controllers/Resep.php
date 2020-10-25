@@ -19,8 +19,9 @@ class Resep extends RESTController
         $nama = $this->get('nama');
         $limit = $this->get('limit');
         $bahan = $this->get('bahan');
-        
-        if ($id === null && $nama === null && $bahan === null) {
+        $order = $this->get('order');
+
+        if ($id === null && $nama === null && $bahan === null && $order === null) {
             $resep = $this->resep->getResep();
         } elseif ($id !== null && $nama !== null && $bahan !== null) {
             $this->response([
@@ -30,19 +31,36 @@ class Resep extends RESTController
         } else {
             if ($nama != null) {
                 if ($limit != null) {
-                    $resep = $this->resep->getResep($id = null, $nama, $limit);   
+                    if ($order != null) {
+                        $resep = $this->resep->getResep($id = null, $nama, $limit, $bahan = null, $order);
+                    } else {
+                        $resep = $this->resep->getResep($id = null, $nama, $limit);
+                    }
                 } else {
-                    $resep = $this->resep->getResep($id = null, $nama);
+                    if ($order != null) {
+                        $resep = $this->resep->getResep($id = null, $nama, $limit = null, $bahan = null, $order);
+                    } else {
+                        $resep = $this->resep->getResep($id = null, $nama);
+                    }
                 }
             } else if ($bahan != null) {
                 if ($limit != null) {
-                    $resep = $this->resep->getResep($id = null, $nama = null, $limit, $bahan);
+                    if ($order != null) {
+                        $resep = $this->resep->getResep($id = null, $nama = null, $limit, $bahan, $order);
+                    } else {
+                        $resep = $this->resep->getResep($id = null, $nama = null, $limit, $bahan);
+                    }
                 } else {
                     $resep = $this->resep->getResep($id = null, $nama = null, $limit = null, $bahan);
                 }
-                
             } else if ($limit != null) {
-                $resep = $this->resep->getResep($id = null, $nama = null, $limit);
+                if ($order != null) {
+                    $resep = $this->resep->getResep($id = null, $nama = null, $limit, $bahan = null, $order);
+                } else {
+                    $resep = $this->resep->getResep($id = null, $nama = null, $limit);
+                }
+            } else if ($order != null) {
+                $resep = $this->resep->getResep($id = null, $nama = null, $limit = null, $bahan = null, $order);
             } else {
                 $resep = $this->resep->getResep($id);
             }
@@ -83,35 +101,40 @@ class Resep extends RESTController
             $this->response([
                 'status' => false,
                 'message' => 'Fail created new data'
-            ], 400);
+            ], 404);
         }
     }
 
     public function index_put()
     {
         $id = $this->put('id');
-        $data = [
-            'nama' => $this->put('nama'),
-            'waktu_memasak' => $this->put('waktu_memasak'),
-            'porsi' => $this->put('porsi'),
-            'harga' => $this->put('harga'),
-            'favorit' => $this->put('favorit'),
-            'dilihat' => $this->put('dilihat'),
-            'gambar' => $this->put('gambar'),
-        ];
+        if ($this->put('nama')) $data['nama'] = $this->put('nama');
+        if ($this->put('waktu_memasak')) $data['waktu_memasak'] = $this->put('waktu_memasak');
+        if ($this->put('porsi')) $data['porsi'] = $this->put('porsi');
+        if ($this->put('harga')) $data['harga'] = $this->put('harga');
+        if ($this->put('favorit')) $data['favorit'] = $this->put('favorit');
+        if ($this->put('dilihat')) $data['dilihat'] = $this->put('dilihat');
+        if ($this->put('gambar')) $data['gambar'] = $this->put('gambar');
 
-        if ($this->resep->updateResep($data, $id) > 0) {
-            // Success
-            $this->response([
-                'status' => true,
-                'message' => 'Successfully Updated'
-            ], 202);
-        } else {
-            // id not found
+        if ($id === null) {
             $this->response([
                 'status' => false,
-                'message' => 'Fail updated data'
+                'message' => 'Provide an id'
             ], 400);
+        } else {
+            if ($this->resep->updateResep($data, $id) > 0) {
+                // Success
+                $this->response([
+                    'status' => true,
+                    'message' => 'Successfully Updated'
+                ], 202);
+            } else {
+                // id not found
+                $this->response([
+                    'status' => false,
+                    'message' => 'Fail updated data'
+                ], 404);
+            }
         }
     }
 
@@ -137,7 +160,7 @@ class Resep extends RESTController
                 $this->response([
                     'status' => false,
                     'message' => 'Id not found'
-                ], 400);
+                ], 404);
             }
         }
     }
