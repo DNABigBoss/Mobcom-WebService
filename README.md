@@ -1,12 +1,12 @@
-# Sprint 6
-19 Oktober -> 25 Oktober 2020 (Minggu ke-8 Mobile Computing 13)
+# Sprint 10
+19 November -> 25 November 2020 (Minggu ke-11 Mobile Computing 113)
 
 # Sprint Backlog
 Story | Task | Status| Contributor
---- | --- | --- | --- 
-Saya bisa berdiskusi dengan pengguna lain mengenai resep yang saya ingin buat | [Membuat Fitur Diskusi Resep](https://github.com/DNABigBoss/Mobcom/issues/29) | In Progress | [Dwiki Sulthon Saputra Marbi](https://github.com/DNABigBoss)
-Saya bisa menyimpan resep yang saya sukai | [Membuat Fitur Bookmark / Favorit](https://github.com/DNABigBoss/Mobcom/issues/27) | In Progress | [Dwiki Sulthon Saputra Marbi](https://github.com/DNABigBoss)
-Saya bisa melihat dan mengedit profil | [Memperbaiki User Interface](https://github.com/DNABigBoss/Mobcom/issues/26) | In Progress | [Faqihuddin Al Farisi](https://github.com/falfisme)
-Saya bisa mengetahui berapa orang yang telah melihat resep tertentu | [Membuat Fitur Perhitungan View Resep](https://github.com/DNABigBoss/Mobcom/issues/28) | In Progress | [Faqihuddin Al Farisi](https://github.com/falfisme)
-Saya bisa melihat dan mengedit profil | [Membuat Session Login](https://github.com/DNABigBoss/Mobcom/issues/24) | In Progress | [Razka Agniatara](https://github.com/Razka173)
-Saya bisa melihat dan mengedit profil  | [Mengedit Profil](https://github.com/DNABigBoss/Mobcom/issues/25) | In Progress | [Razka Agniatara](https://github.com/Razka173)
+--- | --- | --- | ---
+Saya bisa menambahkan resep | [Membuat Tambah Data Resep User di REST API](https://github.com/dwikimarbi/Mobcom/issues/42) | Complete | [Dwiki Sulthon Saputra Marbi](https://github.com/dwikimarbi)
+Saya bisa menambahkan resep | [Membuat Update Data Resep User di REST API](https://github.com/dwikimarbi/Mobcom/issues/43) | Complete | [Dwiki Sulthon Saputra Marbi](https://github.com/dwikimarbi)
+Saya bisa melihat daftar resep berdasarkan bahan yang saya miliki | [Membetulkan Bug Daftar Resep ketika memilih bahan](https://github.com/dwikimarbi/Mobcom/issues/47) | Complete | [Faqihuddin Al Farisi](https://github.com/falfisme)
+Saya bisa mengetahui syarat dan ketentuan aplikasi | [Membuat Halaman About Us](https://github.com/dwikimarbi/Mobcom/issues/45) | Complete | [Faqihuddin Al Farisi](https://github.com/falfisme)
+Saya bisa menambahkan resep | [Membuat pengiriman data penambahan user](https://github.com/dwikimarbi/Mobcom/issues/46) | Complete | [Razka Agniatara](https://github.com/Razka173)
+Saya bisa memverifikasi resep tambahan user | [Membuat Verifikasi Resep User](https://github.com/dwikimarbi/Mobcom/issues/44) | Complete | [Razka Agniatara](https://github.com/Razka173)

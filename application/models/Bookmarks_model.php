@@ -24,18 +24,28 @@ class Bookmarks_model extends CI_model
     public function createBookmark($data)
     {
         $this->db->insert('bookmark', $data);
+        $this->updateBookmarkResep();
         return $this->db->affected_rows();
     }
 
     public function updateBookmark($data, $id)
     {
         $this->db->update('bookmark', $data, ['id' => $id]);
+        $this->updateBookmarkResep();
         return $this->db->affected_rows();
     }
 
-    public function deleteBookmark($id)
+    public function deleteBookmark($id = null,$user_id = null, $resep_id = null)
     {
-        $this->db->delete('bookmark', ['id' => $id]);
+        if ($id != null) $this->db->delete('bookmark', ['id' => $id]);
+        else $this->db->delete('bookmark', ['user_id' => $user_id, 'resep_id' => $resep_id]);
+        $this->updateBookmarkResep();
         return $this->db->affected_rows();
+    }
+    
+    public function updateBookmarkResep()
+    {
+        $sql = "UPDATE `resep` SET `resep`.`favorit` = (SELECT COUNT(`bookmark`.`resep_id`) FROM `bookmark` WHERE `resep`.`id` = `bookmark`.`resep_id` GROUP BY `bookmark`.`resep_id`)";
+        $this->db->query($sql);
     }
 }

@@ -33,5 +33,56 @@ class Bahan_model extends CI_model
         $this->db->delete('bahan', ['id' => $id]);
         return $this->db->affected_rows();
     }
+
+    // Listing all
+    public function listing()
+    {
+        $this->db->select('*');
+        $this->db->from('bahan');
+        $this->db->order_by('id', 'asc');
+        $query = $this->db->get();
+        return $query->result();
+    }
+
+    // Listing all
+    public function listingSort()
+    {
+        $this->db->select('*');
+        $this->db->from('bahan');
+        $this->db->order_by('nama', 'asc');
+        $query = $this->db->get();
+        return $query->result();
+    }
+
+    // Detail
+    public function detail($id_bahan)
+    {
+        $this->db->select('*');
+        $this->db->from('bahan');
+        $this->db->where('id', $id_bahan);
+        $this->db->order_by('id', 'asc');
+        $query = $this->db->get();
+        return $query->row();
+    }
+
+    // Tambah
+    public function tambah($data)
+    {
+        $this->db->insert('bahan', $data);
+    }
+
+    // Edit
+    public function edit($data)
+    {
+        $this->db->where('id', $data['id']);
+        $this->db->update('bahan',$data);
+    }
+
+    // Delete
+    public function delete($data)
+    {
+        $this->db->where('id', $data['id']);
+        $this->db->delete('bahan',$data);
+    }
 }
 ?>
